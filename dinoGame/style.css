@@ -1,0 +1,143 @@
+*
+{
+padding: 0;
+margin: 0;
+font-family: sans-serif;
+box-sizing: border-box;
+}
+
+body
+{
+    display: grid;
+    place-items: center;
+    height:85vh;
+}
+
+#container
+{
+    height:400px;
+    width:1000px;
+    position: relative;
+}
+
+#container #batqi{
+    height:150px;
+    width:100px;
+    position: absolute;
+    bottom:28px;
+    left:20px;
+    
+}
+
+#container #batqi img{
+    height:150px;
+    width:100px;
+    
+}
+
+.batqiActive{
+    animation: animateBatqi 0.5s linear infinite;
+}
+
+
+
+@keyframes animateBatqi {
+    0%, 100%
+    {
+        bottom:28px;
+    }
+    45%, 55%
+    {
+        bottom:160px;
+    }
+}
+
+#container #sky{
+    height:100px;
+    width:150px;
+    position: absolute;
+    bottom:67px;
+    right:-20px;
+}
+
+#container #sky img{
+    height:120px;
+    width:170px;
+}
+
+.skyActive{
+    animation: animateSky 1s linear infinite;
+}
+
+@keyframes animateSky{
+    0%{
+        right:-115%;
+    }
+    100%{
+        right:115%;
+    }
+}
+
+#container #road{
+    height:100%;
+    width:400%;
+    position: absolute;
+    bottom:25px;
+    
+}
+
+#container #road img{
+    height:100%;
+    width:200%;
+    position:absolute;
+}
+
+@keyframes animateRoad{
+    0%
+    {
+        left:0;
+    }
+
+    100%{
+        left:-100%;
+    }
+}
+
+#container #chuu{
+    height:100%;
+    width:400%;
+    bottom:50px;
+    position: absolute;
+    z-index: -1;
+}
+
+#container #chuu img{
+    height:100%;
+    width:800px;
+    opacity: 0.2;
+}
+
+@keyframes animateChuu{
+    0%{
+        left:100%;
+        transform: rotate(0deg);
+    }
+
+    50%{
+        transform: rotate(10deg);
+    }
+
+    100%{
+        left:-100%;
+        transform: rotate(0deg);
+    }
+}
+
+
+#score{
+    height:auto;
+    width:auto;
+    position: absolute;
+    top:20px;
+    right:0;
+}
